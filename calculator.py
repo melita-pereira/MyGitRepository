@@ -1,16 +1,18 @@
 # Calculator #
 
-def addition(a, b):
+def add(a, b):
     return a+b
 
-def subtraction(a, b):
+def subtract(a, b):
     return a-b
 
-def multiplication(a, b):
+def multiply(a, b):
     return a*b
 
-def division(a, b):
-    if (b == 0):
-        return "Error: Cannot divide by zero"
-    return a/b
+def divide(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError:
+        print ("Error: Division by zero is not allowed.")
+        return None
 
